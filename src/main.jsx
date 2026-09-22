@@ -21,7 +21,7 @@ const recommendations=[
   ['imgAuthenticationIcon.svg','Weak authentication paths','4 policies allow agents to authenticate through weaker paths'],
 ];
 function Icon({file,className=''}){return <img className={'icon '+className} alt="" src={A+file}/>}
-function Header(){return <header className="topbar"><img className="brand" src={A+'logo.png'} alt="newcore"/><div className="account"><Icon file="imgAvatar.png"/><span>Aven Stroud</span><span className="chev down"/></div></header>}
+function Header(){return <header className="topbar"><img className="brand" src={A+'logo.svg'} alt="newcore"/><div className="account"><Icon file="imgAvatar.svg"/><span>Aven Stroud</span><span className="chev down"/></div></header>}
 function Sidebar(){return <aside className="sidebar"><nav><div className="nav-active"><Icon file="imgGitBranch.svg"/>Action Center</div><div className="nav-divider"/>{[['imgIdentitiesIcon.svg','Identities'],['imgAgentsIcon.svg','Agents'],['imgApplicationsIcon.svg','Applications'],['imgPoliciesIcon.svg','Policies']].map(([icon,label])=><div className="nav-item" key={label}><Icon file={icon}/>{label}</div>)}</nav></aside>}
 function App(){
   const [stage,setStage]=useState('home');const [query,setQuery]=useState('');const [searchOpen,setSearchOpen]=useState(false);const [scope,setScope]=useState(false);const [scopeQuery,setScopeQuery]=useState('');const [expanded,setExpanded]=useState(false);const [selected,setSelected]=useState([]);const [modal,setModal]=useState(false);
